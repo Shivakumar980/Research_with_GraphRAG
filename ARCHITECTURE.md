@@ -74,55 +74,6 @@ graph TB
     style LLM fill:#10A37F,stroke:#fff,stroke-width:2px,color:#fff
 ```
 
-## Detailed Component Architecture
-
-```mermaid
-graph LR
-    subgraph "Frontend - React Application"
-        A[App.jsx] --> B[Header.jsx]
-        A --> C[ChatMessage.jsx]
-        A --> D[ChatInput.jsx]
-        D --> E[Query Options]
-    end
-    
-    subgraph "Backend - Flask API"
-        F[api_server.py] --> G[/api/query endpoint]
-    end
-    
-    subgraph "Query Engine Components"
-        H[GraphRAGQuery Engine]
-        I[QueryEntityExtractor]
-        J[GraphTraverser]
-        K[HybridRetriever]
-        L[VectorRetriever]
-        M[ResponseGenerator]
-    end
-    
-    subgraph "Storage Layer"
-        N[(Qdrant<br/>Vector DB)]
-        O[(Neo4j<br/>Graph DB)]
-    end
-    
-    A --> F
-    G --> H
-    H --> I
-    H --> J
-    H --> K
-    H --> M
-    K --> L
-    K --> J
-    L --> N
-    J --> O
-    M --> P[OpenAI API]
-    I --> P
-    
-    style A fill:#D97757,stroke:#fff,stroke-width:2px,color:#fff
-    style F fill:#D97757,stroke:#fff,stroke-width:2px,color:#fff
-    style H fill:#2C2C2C,stroke:#D97757,stroke-width:2px,color:#e0e0e0
-    style N fill:#4A90E2,stroke:#fff,stroke-width:2px,color:#fff
-    style O fill:#008CC1,stroke:#fff,stroke-width:2px,color:#fff
-    style P fill:#10A37F,stroke:#fff,stroke-width:2px,color:#fff
-```
 
 ## Data Flow: Ingestion Pipeline
 
