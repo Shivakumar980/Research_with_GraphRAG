@@ -17,6 +17,9 @@ A GraphRAG system that builds a knowledge graph from research papers with:
 
 ## Architecture
 
+For detailed architecture diagrams, see [ARCHITECTURE.md](ARCHITECTURE.md)
+
+**High-Level Overview:**
 ```
 PDF Papers
     ↓
@@ -35,6 +38,8 @@ GraphRAG Query Engine
     ├─ Temporal filtering
     ├─ Hybrid retrieval
     └─ LLM Response Generation
+    ↓
+React Frontend (Charcoal/Coral Theme)
 ```
 
 ## Setup
