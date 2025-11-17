@@ -1,0 +1,38 @@
+.app-header {
+  background: #D97757;
+  color: #ffffff;
+  padding: 25px 30px;
+  text-align: center;
+  box-shadow: 
+    0 4px 30px rgba(217, 119, 87, 0.3);
+  position: relative;
+  overflow: hidden;
+  border-bottom: none;
+}
+
+.app-header::before {
+  display: none;
+}
+
+.app-header::after {
+  display: none;
+}
+
+.app-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+}
+
+.app-header .subtitle {
+  font-size: 14px;
+  opacity: 0.95;
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+}
+

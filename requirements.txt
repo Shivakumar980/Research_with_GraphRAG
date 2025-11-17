@@ -1,0 +1,38 @@
+# GraphRAG Requirements
+
+# PDF Processing
+pypdf>=3.17.0
+pdfplumber>=0.10.0
+# LangChain document loaders (better PDF extraction)
+langchain-community>=0.0.20
+
+# Text Processing & Chunking
+langchain>=0.1.0
+langchain-community>=0.0.20
+langchain-openai>=0.0.5
+langchain-text-splitters>=0.0.1
+tiktoken>=0.5.0
+
+# Embeddings & Vector Store
+qdrant-client>=1.7.0
+sentence-transformers>=2.2.0
+
+# Knowledge Graph
+neo4j>=5.15.0
+networkx>=3.2.0  # Fallback if Neo4j unavailable
+
+# LLM for Entity/Relationship Extraction
+openai>=1.12.0
+
+# Utilities
+python-dotenv>=1.0.0
+tenacity>=8.2.0
+requests>=2.31.0
+
+# Visualization
+pyvis>=0.3.0
+
+# Web API (for frontend)
+flask>=3.1.0
+flask-cors>=6.0.0
+
